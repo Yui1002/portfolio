@@ -1,0 +1,18 @@
+.headline-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.headline-text {
+    flex: 1;
+}
+
+.headline-image {
+    width: 400px; 
+    height: 400px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
