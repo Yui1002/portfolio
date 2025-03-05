@@ -1,7 +1,9 @@
+import Headline from "./Headline";
+
 const App = () => {
 
     return (
-        <div>Hello</div>
+        <Headline />
     )
 }
 
