@@ -1,9 +1,14 @@
 import Headline from "./Headline";
+import Navbar from "./Navbar";
 
 const App = () => {
 
     return (
-        <Headline />
+        <div>
+            <Navbar />
+            <Headline />
+        </div>
+
     )
 }
 
