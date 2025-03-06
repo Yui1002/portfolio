@@ -1,5 +1,6 @@
 import Headline from "./Headline";
 import Navbar from "./Navbar";
+import Tools from "./Tools";
 
 const App = () => {
 
@@ -7,6 +8,7 @@ const App = () => {
         <div>
             <Navbar />
             <Headline />
+            <Tools />
         </div>
 
     )

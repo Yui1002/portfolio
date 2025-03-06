@@ -1,0 +1,19 @@
+.tools-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-24px);
+    }
+}
+
+.icon {
+    animation: moveUpDown 1s infinite
+}
