@@ -53,7 +53,7 @@ const Tools = () => {
   return (
     <div>
       <div className="tools-container">
-        <AiOutlineDown className="icon" size={50} color="#000" />
+        <AiOutlineDown className="icon" size={60} color="#000" />
       </div>
       <div className="languages-container">
         <p className="tools-text">I work with...</p>
