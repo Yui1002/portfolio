@@ -1,5 +1,6 @@
 import Headline from "./Headline";
 import Navbar from "./Navbar";
+import Projects from "./Projects";
 import Tools from "./Tools";
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
             <Navbar />
             <Headline />
             <Tools />
+            <Projects />
         </div>
 
     )

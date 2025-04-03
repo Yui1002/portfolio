@@ -56,7 +56,7 @@ const Tools = () => {
         <AiOutlineDown className="icon" size={60} color="#000" />
       </div>
       <div className="languages-container">
-        <p className="tools-text">I work with...</p>
+        <p className="title">I work with...</p>
         <div className="carousel">
           {currentItems.map(([tool, icon]) => (
             <div key={tool} className="tool">

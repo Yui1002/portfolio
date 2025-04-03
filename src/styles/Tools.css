@@ -14,11 +14,6 @@
     }
 }
 
-.tools-text {
-    font-size: 50px;
-    font-weight: bold;
-}
-
 .icon {
     animation: moveUpDown 1s infinite;
 }
