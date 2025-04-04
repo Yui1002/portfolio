@@ -1,0 +1,64 @@
+.project-card {
+  flex: 1 1 calc(50% - 20px); /* Take 50% of the width minus the gap */
+  max-width: 600px; /* Optional: Limit the maximum width */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  display: flex; /* Enable Flexbox for the card content */
+  flex-direction: row; /* Align content horizontally inside the card */
+  align-items: center; /* Center content vertically */
+  background-color: #FFE4C4; /* Card background */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Clip overflowing content */
+  height: 250px; /* Set a fixed height */
+  color: #1B4D3E; /* Text color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+  transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-details {
+  padding: 20px;
+  flex: 1;
+}
+
+.project-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.github-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2563eb; /* Button background */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.github-link:hover {
+  background-color: #1d4ed8; /* Darker blue on hover */
+}
+
+
+/* @media(max-width: 768px) {
+  .project-card {
+    flex: 1 1 100%
+  }
+} */

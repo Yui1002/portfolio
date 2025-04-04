@@ -5,9 +5,9 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
-      {navbarTitles.map((title: string) => (
-        <div className="navbar-sub-container">
-          <text className="navbar-text">{title}</text>
+      {navbarTitles.map((title: string, index: number) => (
+        <div className="navbar-sub-container" key={index}>
+          <p className="navbar-text">{title}</p>
         </div>
       ))}
     </div>

@@ -1,8 +1,8 @@
 const projectsData = [
     {
         name: "Lesson Manager",
-        description: "This project is about .....",
-        image: "",
+        description: "Lesson planning app designed for teachers. ",
+        image: require("./images/LessonManager.png"),
         githubLink: "https://github.com/Yui1002/LessonManager"
     },
     {
