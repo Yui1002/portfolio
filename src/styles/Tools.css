@@ -14,10 +14,6 @@
     }
 }
 
-.icon {
-    animation: moveUpDown 1s infinite;
-}
-
 .languages-container {
     text-align: center;
 }
@@ -47,7 +43,21 @@
     transition: transform 2s, opacity 2s;
 }
 
-.tool p {
+.tool-icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 80%;
+    height: 80%
+}
+
+.tool-name {
     margin-top: 10px;
     font-size: 20px;
+    font-weight: bold;
 }
