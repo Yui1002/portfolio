@@ -13,29 +13,32 @@ import {
   SiReact,
   SiNodedotjs,
   SiPhp,
+  SiVuedotjs
 } from "react-icons/si";
 import "../styles/Tools.css";
 import { useEffect, useState } from "react";
 import { JSX } from "react";
 
 const Tools = () => {
+  const icon = "icon"
   const toolSets: [string, JSX.Element][][] = [
     [
-      ["JavaScript", <DiJavascript1 size={50} color="#F7DF1E" />],
-      ["TypeScript", <SiTypescript size={50} color="#007ACC" />],
-      ["React/React Native", <SiReact size={50} color="#61DAFB" />],
-      ["Node.js", <SiNodedotjs size={50} color="#68A063" />],
+      ["JavaScript", <DiJavascript1 size={50} color="#F7DF1E" className={icon} />],
+      ["TypeScript", <SiTypescript size={50} color="#007ACC" className={icon}/>],
+      ["React/React Native", <SiReact size={50} color="#61DAFB" className={icon}/>],
+      ["Vue", <SiVuedotjs size={50} color="#42b883" className={icon}/>],
     ],
     [
-      ["Java", <DiJava size={50} color="#007396" />],
-      ["PHP", <SiPhp size={50} color="#777BB4" />],
-      ["Python", <DiPython size={50} color="#3776AB" />],
-      ["PostgreSQL", <DiPostgresql size={50} color="#336791" />],
+      ["Node.js", <SiNodedotjs size={50} color="#68A063" className={icon}/>],
+      ["Java", <DiJava size={50} color="#007396" className={icon}/>],
+      ["PHP", <SiPhp size={50} color="#777BB4" className={icon}/>],
+      ["Python", <DiPython size={50} color="#3776AB" className={icon}/>],
     ],
     [
-      ["MySQL", <DiMysql size={50} color="#4479A1" />],
-      ["AWS", <DiAws size={50} color="#FF9900" />],
-      ["Docker", <DiDocker size={50} color="#2496ED" />],
+      ["PostgreSQL", <DiPostgresql size={50} color="#336791" className={icon}/>],
+      ["MySQL", <DiMysql size={50} color="#4479A1" className={icon}/>],
+      ["AWS", <DiAws size={50} color="#FF9900" className={icon}/>],
+      ["Docker", <DiDocker size={50} color="#2496ED" className={icon}/>],
     ],
   ];
 
@@ -60,8 +63,8 @@ const Tools = () => {
         <div className="carousel">
           {currentItems.map(([tool, icon]) => (
             <div key={tool} className="tool">
-              {icon}
-              <p>{tool}</p>
+              <div className="tool-icon">{icon}</div>
+              <p className="tool-name">{tool}</p>
             </div>
           ))}
         </div>
