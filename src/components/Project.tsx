@@ -1,4 +1,6 @@
 import "../styles/Project.css";
+import { FaGithub } from "react-icons/fa"; 
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 interface ProjectProps {
     project: {
@@ -18,7 +20,8 @@ const Project = ({project}: ProjectProps) => {
             <div className="project-details">
                 <h2 className="project-title">{project.name}</h2>
                 <p className="project-description">{project.description}</p>
-                <a href={project.githubLink} target="_blank" rel="noopener" className="github-link">View on GitHub</a>
+                <FaGithub size={20} className="github-icon"/>
+                <FaExternalLinkAlt size={20} className="website-icon"/>
             </div>
         </div>
     )

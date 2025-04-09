@@ -1,64 +1,42 @@
 .project-card {
-  flex: 1 1 calc(50% - 20px); 
-  max-width: 600px; 
-  box-sizing: border-box; 
-  display: flex; 
-  flex-direction: row;
-  align-items: center; 
-  background-color: #FFE4C4; 
-  border-radius: 10px; 
-  overflow: hidden; 
-  height: 250px; 
-  color: #1B4D3E; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  transition: transform 0.3s ease;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: stretch; /* Ensure both areas stretch to match the grid height */
+  grid-template-rows: auto; /* Allow rows to adapt to content */
+  grid-template-areas: 'Image Details';
+  background-color: #FFE4C4;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
+.project-image {
+  grid-area: Image;
+  height: 100%; /* Match the height of the grid row */
 }
 
 .project-image img {
-  width: 300px;
-  height: auto;
-  object-fit: cover;
+  width: 100%;
+  height: 100%; /* Ensure the image fills the container */
+  object-fit: cover; /* Maintain aspect ratio and crop if necessary */
 }
 
 .project-details {
-  padding: 20px;
-  flex: 1;
+  grid-area: Details;
+  display: grid;
 }
 
 .project-title {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  grid-area: Title;
 }
 
 .project-description {
-  font-size: 16px;
-  margin-bottom: 20px;
-  line-height: 1.5;
+  grid-area: Description;
 }
 
-.github-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #2563eb; /* Button background */
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+.github-icon {
+  grid-area: GIcon;
 }
 
-.github-link:hover {
-  background-color: #1d4ed8; /* Darker blue on hover */
+.website-icon {
+  grid-area: WIcon;
 }
 
-
-/* @media(max-width: 768px) {
-  .project-card {
-    flex: 1 1 100%
-  }
-} */
