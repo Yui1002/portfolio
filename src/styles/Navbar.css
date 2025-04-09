@@ -1,0 +1,15 @@
+.navbar-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.navbar-sub-container {
+    margin-left: 30px;
+}
+
+.navbar-text {
+    font-size: 20px;
+    font-weight: 500;
+}

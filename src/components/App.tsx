@@ -1,7 +1,18 @@
+import Headline from "./Headline";
+import Navbar from "./Navbar";
+import Projects from "./Projects";
+import Tools from "./Tools";
+
 const App = () => {
 
     return (
-        <div>Hello</div>
+        <div>
+            <Navbar />
+            <Headline />
+            <Tools />
+            <Projects />
+        </div>
+
     )
 }
 
