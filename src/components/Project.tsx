@@ -20,8 +20,11 @@ const Project = ({project}: ProjectProps) => {
             <div className="project-details">
                 <h2 className="project-title">{project.name}</h2>
                 <p className="project-description">{project.description}</p>
-                <FaGithub size={20} className="github-icon"/>
-                <FaExternalLinkAlt size={20} className="website-icon"/>
+                <div className="project-tools"></div>
+                <div className="project-icon">
+                    <FaGithub size={20}/>
+                    <FaExternalLinkAlt size={20} />
+                </div>
             </div>
         </div>
     )

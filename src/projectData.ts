@@ -1,7 +1,7 @@
 const projectsData = [
     {
         name: "Lesson Manager",
-        description: "Lesson planning app designed for teachers. ",
+        description: "Lesson Manager enables teachers to create student profiles and schedule lessons with ease. Both students and teachers can view each other’s schedules through a dynamic and user-friendly interface. Additionally, they can access a history of past lessons for reference.",
         image: require("./images/LessonManager.png"),
         githubLink: "https://github.com/Yui1002/LessonManager"
     },
