@@ -1,64 +1,113 @@
 .project-card {
-  flex: 1 1 calc(50% - 20px); 
-  max-width: 600px; 
-  box-sizing: border-box; 
-  display: flex; 
-  flex-direction: row;
-  align-items: center; 
-  background-color: #FFE4C4; 
-  border-radius: 10px; 
-  overflow: hidden; 
-  height: 250px; 
-  color: #1B4D3E; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  transition: transform 0.3s ease;
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  grid-template-rows: 1.5fr 0.2fr auto auto;
+  grid-template-areas: 
+    "Image Image"
+    "Title Icons"
+    "Description Description"
+    "Tools Tools";
+  background-color: #ffe4c4;
+  padding: 10px 20px;
+  border-radius: 20px;
+  gap: 10px;
+  margin-top: 50px;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
+.project-image {
+  grid-area: Image;
 }
 
 .project-image img {
-  width: 300px;
-  height: auto;
+  width: 100%; 
+  height: 100%; 
   object-fit: cover;
-}
-
-.project-details {
-  padding: 20px;
-  flex: 1;
+  border-radius: 20px;
 }
 
 .project-title {
-  font-size: 30px;
+  grid-area: Title;
+  font-size: 2em;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 .project-description {
-  font-size: 16px;
-  margin-bottom: 20px;
-  line-height: 1.5;
+  grid-area: Description;
+  font-size: 20px;
 }
 
-.github-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #2563eb; /* Button background */
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
+.project-tools {
+  grid-area: Tools;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project-tool {
+  background-color: #ffbf00;
+  border-radius: 10px;
+  font-size: 24px;
+  padding: 10px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  margin: 4px;
 }
 
-.github-link:hover {
-  background-color: #1d4ed8; /* Darker blue on hover */
+.project-icon {
+  grid-area: Icons;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.project-icon svg {
+  width: 40px;
+  height: 40px;
+}
 
-/* @media(max-width: 768px) {
-  .project-card {
-    flex: 1 1 100%
+@media screen and (max-width: 600px) {
+  .project-image img {
+    max-width: 100%;
+    max-height: 100%;
   }
-} */
+}
+
+@media screen and (min-width: 600px) {
+  .project-image img {
+    /* max-width: 510px;
+    max-height: 290px; */
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-card {
+    grid-template-columns: 1fr 0.5fr 0.2fr;
+    grid-template-rows: 0.5fr 0.5fr auto;
+    grid-template-areas: 
+      "Image Title Icons"
+      "Image Description Description"
+      "Image Tools Tools";
+    padding: 30px 50px;
+  }
+
+  .project-image {
+    width: 90%;
+  }
+
+  .project-title {
+    font-size: 3em;
+  }
+
+  .project-description {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .project-image img {
+    max-width: 640px;
+    max-height: 350px;
+  }
+}
