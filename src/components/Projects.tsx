@@ -1,5 +1,5 @@
 import Project from "./Project";
-import projectData from "../projectData";
+import projectData from "../data/projectData";
 import '../styles/Projects.css'
 
 const Projects = () => {
