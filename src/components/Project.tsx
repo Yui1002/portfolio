@@ -16,7 +16,19 @@ interface ProjectProps {
 const Project = ({ project }: ProjectProps) => {
   return (
     <div className="project-card">
-      <div className="project-image">
+        <div className="project-image"><img src={project.image} alt={project.name} /></div>
+        <div className="project-title">{project.name}</div>
+        <div className="project-description">{project.description}</div>
+        <div className="project-tools">
+          {project.tools.map((tool, index) => (
+            <p key={index} className="project-tool">{tool}</p>
+          ))}
+        </div>
+        <div className="project-icon">
+            <FaGithub size={50} />
+            <FaExternalLinkAlt size={50} />
+        </div>
+      {/* <div className="project-image">
         <img src={project.image} alt={project.name} />
       </div>
       <div className="project-details">
@@ -33,7 +45,7 @@ const Project = ({ project }: ProjectProps) => {
           <FaGithub size={50} />
           <FaExternalLinkAlt size={50} />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

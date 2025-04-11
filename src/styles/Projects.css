@@ -3,13 +3,11 @@
 }
 
 
-@media screen and (max-width: 600px) {
-
+@media screen and (max-width: 600px), screen and (min-width: 600px) {
+  .projects-sub-container {
+    margin: 0 20px;
+  }
 }
-
-@media screen and (min-width: 600px) {
-
-} 
 
 @media screen and (min-width: 768px) {
 
@@ -17,4 +15,10 @@
 
 @media screen and (min-width: 992px) {
 
+}
+
+@media screen and (min-width: 1200px) {
+  .projects-sub-container {
+    margin: 0 150px;
+  }
 }
