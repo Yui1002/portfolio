@@ -7,12 +7,14 @@ const projectsData = [
         githubLink: "https://github.com/Yui1002/LessonManager",
         websiteLink: ""
     },
-    // {
-    //     name: "Timebox",
-    //     description: "This project is a timekeeping mobile app designed for employees. It enables users to clock in and out seamlessly, ensuring accurate tracking of work hours. Both employers and employees can access time records, while employers also have the ability to send hiring requests directly through the app.",
-    //     image: "",
-    //     githubLink: "https://github.com/Yui1002/timebox"
-    // }
+    {
+        name: "Timebox",
+        description: "This project is a timekeeping mobile app designed for employees. It enables users to clock in and out seamlessly, ensuring accurate tracking of work hours. Both employers and employees can access time records, while employers also have the ability to send hiring requests directly through the app.",
+        image: require("./images/Timebox.png"),
+        tools: ["React Native", "TypeScript", "Node.js", "Python", "PostgreSQL", "Docker"],
+        githubLink: "https://github.com/Yui1002/timebox",
+        websiteLink: ""
+    },
 ]
 
 export default projectsData;

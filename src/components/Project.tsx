@@ -25,27 +25,13 @@ const Project = ({ project }: ProjectProps) => {
           ))}
         </div>
         <div className="project-icon">
-            <FaGithub size={50} />
-            <FaExternalLinkAlt size={50} />
+            <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+              <FaGithub size={50} color="#1B4D3E" />
+            </a>
+            <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">
+              <FaExternalLinkAlt size={50} color="#1B4D3E" />
+            </a>
         </div>
-      {/* <div className="project-image">
-        <img src={project.image} alt={project.name} />
-      </div>
-      <div className="project-details">
-        <h2 className="project-title">{project.name}</h2>
-        <p className="project-description">{project.description}</p>
-        <div className="project-tools">
-          {project.tools.map((tool, index) => (
-            <p key={index} className="project-tool">
-              {tool}
-            </p>
-          ))}
-        </div>
-        <div className="project-icon">
-          <FaGithub size={50} />
-          <FaExternalLinkAlt size={50} />
-        </div>
-      </div> */}
     </div>
   );
 };

@@ -11,6 +11,7 @@
   padding: 10px 20px;
   border-radius: 20px;
   gap: 10px;
+  margin-top: 50px;
 }
 
 .project-image {
@@ -38,8 +39,9 @@
 .project-tools {
   grid-area: Tools;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .project-tool {
@@ -63,11 +65,19 @@
   height: 40px;
 }
 
-@media screen and (min-width: 1200px) {
-  .project-card {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-area: "";
+@media screen and (max-width: 600px) {
+  .project-image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .project-image img {
+    /* max-width: 510px;
+    max-height: 290px; */
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 
@@ -92,5 +102,12 @@
 
   .project-description {
     font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .project-image img {
+    max-width: 640px;
+    max-height: 350px;
   }
 }
