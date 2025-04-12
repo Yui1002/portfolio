@@ -12,6 +12,19 @@ const experienceData = [
         companyLink: "https://www.safermobility.com"
     },
     {
+        companyName: "Timebox",
+        position: "Full Stack Engineer | Freelance",
+        period: 'Jan 2023 - Jan 2025',
+        description: [
+            "Designed and developed a mobile app to record time for activities",
+            "Worked with PostgreSQL to develop database architecture and schema designs",
+            "Developed native iOS experience with React Native and TypeScript",
+            "Deployed the application utilizing TestFlight and Docker"
+        ],
+        companyLogo: require("../images/Freelance.png"),
+        companyLink: "https://github.com/Yui1002/timebox"
+    },
+    {
         companyName: "Empower Work",
         position: "Full Stack Engineer | Freelance",
         period: 'Jun 2023 - Feb 2024',
@@ -23,6 +36,31 @@ const experienceData = [
         ],
         companyLogo: require("../images/Logo2.png"),
         companyLink: "https://www.empowerwork.org"
+    },
+    {
+        companyName: "Lesson Manager",
+        position: "Full Stack Engineer | Freelance",
+        period: 'Jan 2023 - Jun 2023',
+        description: [
+            "Designed and developed a UI/UX timetable app for educators to manage their students’ lessons",
+            "Designed and developed a database schema to achieve high scalability",
+            "Built secure authentication for login and endpoints using JWT",
+        ],
+        companyLogo: require("../images/Freelance.png"),
+        companyLink: "https://github.com/Yui1002/LessonManager"
+    },
+    {
+        companyName: "Netone Systems",
+        position: "Network Engineer",
+        period: 'Apr 2019 - Jun 2021',
+        description: [
+            "Proposed scalable and reliable network solutions to clients",
+            "Setup Cisco routers, switches and servers for remote-working environments for small businesses (< 10,000 users)",
+            "Troubleshooted L2 and L3 network issues under 24 hours",
+            "Scaled network architectures by proposing innovative solutions to various stakeholders"
+        ],
+        companyLogo: require("../images/Netone.png"),
+        companyLink: "https://www.netone.co.jp/english/"
     },
 ]
 

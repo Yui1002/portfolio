@@ -1,4 +1,5 @@
 import "../styles/Experience.css";
+import { FaCaretRight } from "react-icons/fa";
 
 interface ExperienceProps {
   experience: {
@@ -15,17 +16,31 @@ const Experience = ({ experience }: ExperienceProps) => {
   return (
     <div className="timeline-item">
       <div className="timeline-icon">
-        <img src={experience.companyLogo} alt={experience.companyName} />
+        <a href={experience.companyLink} target="_blank" rel="noopener noreferrer">
+          <img src={experience.companyLogo} alt={experience.companyName} />
+        </a>
       </div>
-      <div className="timeline-content">
-        <h3 className="timeline-title">{experience.position}</h3>
-        <h4 className="timeline-subtitle">{experience.companyName}</h4>
-        <p className="timeline-date">{experience.period}</p>
-      </div>
-      <div className="timeline-details">
-        {experience.description.map((d, index) => (
-          <p key={index}>{d}</p>
-        ))}
+      <div>
+        <div className="timeline-content">
+          <p className="timeline-position">{experience.position}</p>
+          <a
+            href={experience.companyLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="timeline-name"
+          >
+            @{experience.companyName}
+          </a>
+          <p className="timeline-date">{experience.period}</p>
+        </div>
+        <div className="timeline-descriptions">
+          {experience.description.map((d, index) => (
+            <div className="timeline-description" key={index}>
+              <FaCaretRight />
+              <p>{d}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
