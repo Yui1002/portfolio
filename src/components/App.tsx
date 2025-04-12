@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Projects from "./Projects";
 import Tools from "./Tools";
 import Experiences from "./Experiences";
+import About from "./About";
 
 const App = () => {
 
@@ -13,6 +14,7 @@ const App = () => {
             <Tools />
             <Projects />
             <Experiences />
+            <About />
         </div>
 
     )
