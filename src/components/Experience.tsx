@@ -16,23 +16,31 @@ const Experience = ({ experience }: ExperienceProps) => {
   return (
     <div className="timeline-item">
       <div className="timeline-icon">
-        <img src={experience.companyLogo} alt={experience.companyName} />
+        <a href={experience.companyLink} target="_blank" rel="noopener noreferrer">
+          <img src={experience.companyLogo} alt={experience.companyName} />
+        </a>
       </div>
       <div>
         <div className="timeline-content">
-            <p className="timeline-position">{experience.position}</p>
-            <p className="timeline-name">{experience.companyName}</p>
-            <p className="timeline-date">{experience.period}</p>
+          <p className="timeline-position">{experience.position}</p>
+          <a
+            href={experience.companyLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="timeline-name"
+          >
+            @{experience.companyName}
+          </a>
+          <p className="timeline-date">{experience.period}</p>
         </div>
         <div className="timeline-descriptions">
-            {experience.description.map((d, index) => (
-                <div className="timeline-description">
-                    <FaCaretRight />
-                    <p key={index}>{d}</p>
-                </div>
-            ))}
+          {experience.description.map((d, index) => (
+            <div className="timeline-description" key={index}>
+              <FaCaretRight />
+              <p>{d}</p>
+            </div>
+          ))}
         </div>
-
       </div>
     </div>
   );
