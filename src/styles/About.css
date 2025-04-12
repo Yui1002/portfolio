@@ -1,0 +1,17 @@
+.about-container {
+    margin: 10px 100px;
+}
+
+.about-content {
+    display: flex;
+
+}
+
+.history-container {
+    width: 50%;
+}
+
+.contacts {
+    width: 50%;
+
+}
