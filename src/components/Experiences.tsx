@@ -4,7 +4,7 @@ import Experience from "./Experience";
 
 const Experiences = () => {
   return (
-    <div className="experience-container">
+    <div id="experience" className="experience-container">
       <p className="title">Work Experience</p>
       <div className="timeline">
         {experienceData.map((experience, index) => <Experience key={index} experience={experience}/>)}
