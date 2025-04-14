@@ -1,38 +1,44 @@
 import History from "./History";
-import '../styles/About.css'
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import "../styles/About.css";
+import { MdEmail, MdPhone } from "react-icons/md";
+import ContactItem from "./ContactItem";
+import { Contact } from "../types";
+import { config } from '../../config';
+
+const contactData: Contact[] = [
+  {
+    type: "Email",
+    value: config.email,
+    icon: <MdEmail size={40} color="#1b4d3e" className="email-icon" />,
+  },
+  {
+    type: "Phone",
+    value: config.phone,
+    icon: <MdPhone size={40} color="#1b4d3e" className="phone-icon" />,
+  },
+];
 
 const About = () => {
   return (
     <div className="about-container">
-        <p className="title">About Me</p>
-        <div className="about-content">
-            <div className="history-container">
-                <History />
-            </div>
-            <div className="contacts">
-                <p>Get in Touch!</p>
-                <div>
-                    <p>Email</p>
-                    <p>yuidayal@gmail.com</p>
-                </div>
-                <div>
-                    <p>Phone</p>
-                    <p>510-836-9377</p>
-                </div>
-                <div>
-                    <p>Download CV</p>
-                </div>
-                <div className="social-media-icon">
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                        <FaGithub size={50} color="#1B4D3E" />
-                    </a>
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin size={50} color="#1B4D3E" />
-                    </a>
-                </div>
-            </div>
+      <p className="title">About Me</p>
+      <div className="about-content">
+        <div className="history-container">
+          <History />
         </div>
+        <div className="contacts-container">
+          <p className="contacts-title">Get in Touch!</p>
+          <div>
+            {contactData.length > 0 ? (
+              contactData.map((item) => (
+                <ContactItem key={item.type} item={item} />
+              ))
+            ) : (
+              <p>No contact information available</p>
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
