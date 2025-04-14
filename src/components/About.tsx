@@ -20,13 +20,13 @@ const contactData: Contact[] = [
 
 const About = () => {
   return (
-    <div className="about-container">
+    <div id="about" className="about-container">
       <p className="title">About Me</p>
       <div className="about-content">
         <div className="history-container">
           <History />
         </div>
-        <div className="contacts-container">
+        <div id="contact" className="contacts-container">
           <p className="contacts-title">Get in Touch!</p>
           <div>
             {contactData.length > 0 ? (

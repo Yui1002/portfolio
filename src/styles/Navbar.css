@@ -1,12 +1,13 @@
 .navbar-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
-}
-
-.navbar-sub-container {
-    margin-left: 30px;
+    width: 70%;
+    margin: 50px auto;
+    gap: 50px;
+    background-color: #ffe4c4;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 .navbar-text {

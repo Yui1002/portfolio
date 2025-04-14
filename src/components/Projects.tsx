@@ -5,7 +5,7 @@ import '../styles/Projects.css'
 const Projects = () => {
     
     return (
-        <div className="projects-container">
+        <div id="projects" className="projects-container">
             <p className="title">Projects</p>
             <div className="projects-sub-container">
                 {projectData.map((project, index) => (
