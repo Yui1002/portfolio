@@ -10,6 +10,15 @@
     margin: 0
 }
 
+.headline-title h1 {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.headline-title h2 {
+    text-align: center;
+}
+
 @media screen and (max-width: 600px) {
     .headline-container {
         display: block;
@@ -17,13 +26,10 @@
     }
 
     .headline-title h1 {
-        text-align: center;
         font-size: 5em;
-        margin: 10px 0px;
     }
 
     .headline-title h2 {
-        text-align: center;
         font-size: 1.5em;
     }
 
@@ -35,20 +41,17 @@
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (max-width: 767px) {
     .headline-container {
         display: block;
         margin: 0 10px
     }
 
     .headline-title h1 {
-        text-align: center;
         font-size: 6em;
-        margin: 10px 0px;
     }
 
     .headline-title h2 {
-        text-align: center;
         font-size: 1.5em;
     }
 
@@ -60,13 +63,7 @@
     }
 }
 
-@media screen and (min-width: 768px) {
-    .headline-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
+@media screen and (min-width: 768px) {    
     .headline-image {
         width: 300px; 
         height: 300px; 
@@ -85,12 +82,6 @@
 }
 
 @media screen and (min-width: 992px) {
-    .headline-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
     .headline-image {
         width: 320px; 
         height: 320px; 
@@ -110,10 +101,7 @@
 
 @media screen and (min-width: 1200px) {
     .headline-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0px 120px
+        margin: 150px 120px
     }
     
     .headline-image {

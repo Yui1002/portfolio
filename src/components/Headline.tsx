@@ -2,7 +2,7 @@ import '../styles/Headline.css'
 
 const Headline = () => {
     return (
-        <div className="headline-container">
+        <div id='home' className="headline-container">
             <div className="headline-title">
                 <h1>Hello!</h1>
                 <h1>I'm Yui.</h1>

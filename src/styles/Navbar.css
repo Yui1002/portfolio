@@ -5,12 +5,15 @@
     width: 70%;
     margin: 50px auto;
     gap: 50px;
-    background-color: #ffe4c4;
+    background-color: rgba(255, 228, 196, 0.6);;
     border-radius: 20px;
     cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 15%
 }
 
 .navbar-text {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: bold;
 }
