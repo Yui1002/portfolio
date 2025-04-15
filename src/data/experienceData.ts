@@ -8,7 +8,8 @@ const experienceData = [
             "Utilizing Socket.IO and WebRTC to create a seamless communication experience",
             "Creating comprehensive end-to-end tests with pytest to ensure application reliability"
         ],
-        companyLogo: require("../images/Logo1.png"),
+        companyLogo: require("../images/webp/Logo1.webp"),
+        fallback: require("../images/fallback/Logo1.png"),
         companyLink: "https://www.safermobility.com"
     },
     {
@@ -21,7 +22,8 @@ const experienceData = [
             "Developed native iOS experience with React Native and TypeScript",
             "Deployed the application utilizing TestFlight and Docker"
         ],
-        companyLogo: require("../images/Freelance.png"),
+        companyLogo: require("../images/webp/Freelance.webp"),
+        fallback: require("../images/fallback/Freelance.png"),
         companyLink: "https://github.com/Yui1002/timebox"
     },
     {
@@ -34,7 +36,8 @@ const experienceData = [
             "Working on Extract, Transform, Load (ETL) process to cleanup the initial dataset",
             "Designed and developed a search algorithm to index suitable resources for users"
         ],
-        companyLogo: require("../images/Logo2.png"),
+        companyLogo: require("../images/webp/Logo2.webp"),
+        fallback: require("../images/fallback/Logo2.png"),
         companyLink: "https://www.empowerwork.org"
     },
     {
@@ -46,7 +49,8 @@ const experienceData = [
             "Designed and developed a database schema to achieve high scalability",
             "Built secure authentication for login and endpoints using JWT",
         ],
-        companyLogo: require("../images/Freelance.png"),
+        companyLogo: require("../images/webp/Freelance.webp"),
+        fallback: require("../images/fallback/Freelance.png"),
         companyLink: "https://github.com/Yui1002/LessonManager"
     },
     {
@@ -59,7 +63,8 @@ const experienceData = [
             "Troubleshooted L2 and L3 network issues under 24 hours",
             "Scaled network architectures by proposing innovative solutions to various stakeholders"
         ],
-        companyLogo: require("../images/Netone.png"),
+        companyLogo: require("../images/webp/Netone.webp"),
+        fallback: require("../images/fallback/Netone.png"),
         companyLink: "https://www.netone.co.jp/english/"
     },
 ]

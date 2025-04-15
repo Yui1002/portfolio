@@ -7,6 +7,7 @@ interface ProjectProps {
     name: string;
     description: string;
     image: string;
+    fallback: string;
     tools: Array<string>;
     githubLink: string;
     websiteLink: string;
@@ -16,7 +17,13 @@ interface ProjectProps {
 const Project = ({ project }: ProjectProps) => {
   return (
     <div className="project-card">
-        <div className="project-image"><img src={project.image} alt={project.name} /></div>
+        <div className="project-image">
+          <picture>
+            <source srcSet={project.image} type="image/webp"/>
+            <source srcSet={project.fallback} type="image/png"/>
+            <img src={project.fallback} alt={project.name} loading="lazy"/>
+          </picture>
+        </div>
         <div className="project-title">{project.name}</div>
         <div className="project-description">{project.description}</div>
         <div className="project-tools">

@@ -1,22 +1,36 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require('path')
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const path = require("path");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   target: "web",
   entry: "./src/index.tsx",
   output: {
-    filename: "bundle.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
-    assetModuleFilename: 'images/[name][ext]'
+    assetModuleFilename: "images/[name][ext]",
+    clean: true,
   },
   devServer: {
-    static: path.resolve(__dirname, 'dist'),
-    port: 6788
+    static: path.resolve(__dirname, "dist"),
+    port: 6788,
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+      },
     }),
   ],
   module: {
@@ -37,15 +51,23 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
-        type: 'asset/resource'
-      }
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/,
+        type: "asset/resource",
+      },
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.jsx', '.js']
+    extensions: [".tsx", ".ts", ".jsx", ".js"],
   },
+  optimization: {
+    minimize: true,
+    minimizer: [`...`, new CssMinimizerPlugin()],
+    splitChunks: {
+      chunks: "all",
+    },
+  },
+  devtool: "source-map",
 };
