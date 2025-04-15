@@ -1,14 +1,16 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const path = require('path')
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   target: "web",
   entry: "./src/index.tsx",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    assetModuleFilename: 'images/[name][ext]'
+    assetModuleFilename: 'images/[name][ext]',
+    clean: true,
   },
   devServer: {
     static: path.resolve(__dirname, 'dist'),
@@ -17,6 +19,18 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true
+      },
     }),
   ],
   module: {
@@ -48,4 +62,15 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js']
   },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      `...`,
+      new CssMinimizerPlugin(),
+    ],
+    splitChunks: {
+      chunks: 'all',
+    }
+  },
+  devtool: "source-map",
 };
