@@ -1,4 +1,4 @@
-import History from "./History";
+import { lazy, Suspense } from 'react';
 import "../styles/About.css";
 import { MdEmail, MdPhone } from "react-icons/md";
 import ContactItem from "./ContactItem";
@@ -18,14 +18,18 @@ const contactData: Contact[] = [
   },
 ];
 
+const History = lazy(() => import("./History"));
+
 const About = () => {
   return (
     <div id="about" className="about-container">
       <p className="title">About Me</p>
       <div className="about-content">
-        <div className="history-container">
-          <History />
-        </div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <div className="history-container">
+            <History />
+          </div>
+        </Suspense>
         <div id="contact" className="contacts-container">
           <p className="contacts-title">Get in Touch!</p>
           <div>

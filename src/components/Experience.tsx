@@ -8,6 +8,7 @@ interface ExperienceProps {
     period: string;
     description: Array<string>;
     companyLogo: string;
+    fallback: string;
     companyLink: string;
   };
 }
@@ -17,7 +18,11 @@ const Experience = ({ experience }: ExperienceProps) => {
     <div className="timeline-item">
       <div className="timeline-icon">
         <a href={experience.companyLink} target="_blank" rel="noopener noreferrer">
-          <img src={experience.companyLogo} alt={experience.companyName} />
+          <picture>
+            <source srcSet={experience.companyLogo} type="image/webp"/>
+            <source srcSet={experience.fallback} type="image/png"/>
+            <img src={experience.fallback} alt={experience.companyName} loading="lazy"/>
+          </picture>
         </a>
       </div>
       <div>
