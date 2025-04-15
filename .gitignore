@@ -5,3 +5,4 @@ dist
 .DS_Store
 src/.DS_Store
 src/images/.DS_Store
+deploy.sh
